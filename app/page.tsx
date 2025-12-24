@@ -1,50 +1,53 @@
 import FlywheelDashboard from '@/components/FlywheelDashboard';
+import { Flame } from 'lucide-react';
 
 export default function Home() {
     return (
-        <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6 relative overflow-hidden font-mono">
+        <main className="min-h-screen bg-[#09090b] text-[#fafafa] flex flex-col items-center justify-center p-4 relative overflow-hidden">
 
-            {/* Brutalist Header */}
-            <div className="max-w-4xl w-full z-10 flex flex-col items-start gap-8">
+            {/* Ambient Background - Simplified */}
+            <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-orange-600/20 rounded-full blur-[120px] pointer-events-none opacity-40" />
+            <div className="absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[100px] pointer-events-none opacity-30" />
 
-                <div className="w-full flex justify-between items-end border-b border-white/20 pb-4 mb-4">
-                    <h1 className="text-6xl md:text-8xl font-black tracking-tighter uppercase whitespace-nowrap">
-                        Wildfire
+            <div className="max-w-5xl w-full z-10 flex flex-col items-start gap-12">
+
+                {/* Header Section */}
+                <header className="w-full flex justify-between items-center">
+                    <div className="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full backdrop-blur-md">
+                        <span className="text-[10px] font-mono tracking-widest text-orange-400 uppercase">
+                            $WILDFIRE
+                        </span>
+                    </div>
+                </header>
+
+                {/* Hero Content */}
+                <div className="w-full text-center md:text-left space-y-6">
+                    <h1 className="text-6xl md:text-8xl font-black tracking-tighter uppercase leading-[0.9] text-white">
+                        WILDFIRE
                     </h1>
-                    <span className="hidden md:block text-xs text-stone-500 mb-2">
-                        PROTOCOL_V1.0
-                    </span>
+                    <p className="max-w-2xl text-lg text-zinc-400 font-light">
+                        The autonomous protocol that turns trading volatility into permanent value. <br />
+                        <span className="text-orange-500 font-bold"> Burn. Buyback. Repeat.</span>
+                    </p>
+
+                    {/* Buttons */}
+                    <div className="flex flex-col md:flex-row gap-4 pt-4 justify-center md:justify-start">
+                        <a
+                            href="https://pump.fun/board"
+                            target="_blank"
+                            className="bg-white text-black px-6 py-3 rounded-lg font-bold flex items-center justify-center gap-2 hover:bg-zinc-200 transition-all"
+                        >
+                            IGNITE POSITION <Flame size={18} className="text-orange-600" />
+                        </a>
+                    </div>
                 </div>
 
-                <p className="max-w-xl text-lg md:text-xl text-stone-400 leading-relaxed">
-                    Turn trading volatility into permanent value. <br />
-                    <span className="text-white">Burn. Buyback. Repeat.</span>
-                </p>
-
-                {/* Dashboard Component */}
-                <div className="w-full my-8">
+                {/* Real-time Dashboard */}
+                <div className="w-full">
                     <FlywheelDashboard />
                 </div>
 
-                {/* Action Links */}
-                <div className="flex gap-6 text-sm uppercase tracking-widest w-full justify-between md:justify-start">
-                    <a
-                        href="https://pump.fun/board"
-                        target="_blank"
-                        className="border-b border-white hover:bg-white hover:text-black transition-colors pb-1"
-                    >
-                        Ignite Position
-                    </a>
-                    <a
-                        href="https://t.me/wildfire_bot"
-                        target="_blank"
-                        className="border-b border-stone-600 text-stone-400 hover:text-white hover:border-white transition-colors pb-1"
-                    >
-                        Telegram Bot
-                    </a>
-                </div>
             </div>
-
         </main>
     )
 }
