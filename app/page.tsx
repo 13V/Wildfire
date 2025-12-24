@@ -70,7 +70,7 @@ export default function Home() {
                             IGNITE POSITION <Flame size={18} className="text-orange-600 group-hover:animate-pulse" />
                         </a>
                         <a
-                            href="https://t.me/wildfire_bot"
+                            href="https://t.me/WildfireFlywheel_Bot"
                             target="_blank"
                             className="px-8 py-4 rounded-lg font-mono text-sm border border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20 transition-all text-zinc-300 hover:text-white flex items-center justify-center gap-2 group"
                         >
