@@ -8,6 +8,7 @@
 }
 
 body {
+    background-color: red !important;
     color: var(--foreground);
     background: var(--background);
     font-family: Arial, Helvetica, sans-serif;
